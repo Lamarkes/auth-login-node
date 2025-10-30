@@ -4,6 +4,7 @@ module.exports = (app) => {
   const rateLimit = require('express-rate-limit');
 
   const limit = rateLimit({
+    windowMs: 10 * 60 * 1000,
     max:3,
     message: "Muitas requisiçoes, tente novamente mais tarde!"
   });
