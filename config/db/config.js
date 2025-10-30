@@ -1,7 +1,7 @@
 
 const mysql = require('mysql2/promise');
 
-const config = mysql.createPool({
+const db = mysql.createPool({
 
     host: 'localhost',
     user: 'root',
@@ -9,4 +9,5 @@ const config = mysql.createPool({
     database: 'auth_users'
 });
 
-module.exports = config;
+
+module.exports = db;
